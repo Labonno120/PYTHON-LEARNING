@@ -1,3 +1,3 @@
 list = ["bristy","trishna","tonmoy"]
-for i in list:
-    print(i)
+for i in range(len(list)):
+    print(list[i])
