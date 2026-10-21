@@ -3,10 +3,9 @@ with open("students.csv", "r") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         #everytime different dictionary is created
-        student = {}
-        student["name"] = name
-        student["house"] = house
-        students.append(student)
-for s in students:
+        students.append({"name":name, "house":house})
+def getName(s):
+    return s["name"]
+for s in sorted(students, key = getName):
     print(s["name"] + " is in " + s["house"])
 
