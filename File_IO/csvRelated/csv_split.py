@@ -1,4 +1,12 @@
+students = []
 with open("students.csv", "r") as file:
     for line in file:
         name, house = line.rstrip().split(",")
-        print(f"{name} is in {house}")
+        #everytime different dictionary is created
+        student = {}
+        student["name"] = name
+        student["house"] = house
+        students.append(student)
+for s in students:
+    print(s["name"] + " is in " + s["house"])
+
