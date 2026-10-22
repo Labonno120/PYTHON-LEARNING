@@ -1,7 +1,7 @@
+import re
 email = input("Enter the email address: ").strip()
-username, domain = email.split("@")
-if username and domain.endswith(".com"):
+
+if re.search(r".+@.+\.com", email):
     print("Valid")
 else:
     print("Invalid")
-#can be valid for hello@.come which is wrong.
