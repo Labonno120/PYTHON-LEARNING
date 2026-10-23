@@ -1,5 +1,9 @@
 class Student:
     def __init__(self, name, house):
+        if not name:
+            raise ValueError("Missing name")
+        if house not in ["Gazipur", "Dhaka", "Feni", "Hyderabad"]:
+            raise ValueError("Invalid House")
         self.name = name
         self.house = house
 def main():
@@ -8,8 +12,7 @@ def main():
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    student = Student(name,house) #creates a new object from the student class
-     # dot lets u access the attribute of the object
-    return student # returning a class
+    return Student(name,house) 
+    
 if __name__ == "__main__":
     main()
