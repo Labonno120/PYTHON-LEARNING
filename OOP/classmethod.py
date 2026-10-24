@@ -1,11 +1,18 @@
 import random
-class Hat:
-    houses = ["Feni", "Dhaka", "Mirpur"]
+class Student:
     @classmethod
-    def rd(cls, name):
-        print(name + " is from " +random.choice(cls.houses))
-
+    def get(cls):
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house) # initializing class, beacuse its class itself
+    def __init__(self,name,house):
+        self.house = house
+        self.name = name
+    def __str__(self):
+        return (self.name + " is from " + self.house)
 def main():
-    Hat.rd("Harry")
+    student = Student.get()
+    print(student)
+
 if __name__ == "__main__":
     main()
