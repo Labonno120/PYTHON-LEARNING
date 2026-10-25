@@ -3,7 +3,12 @@ import argparse
 #creates a argumentparser
 parser = argparse.ArgumentParser()
 #tells python to expect the -n option
-parser.add_argument("-n")
+parser.add_argument(
+    "-n",
+    default = 1,
+    help = "number of times to meow",
+    type = int
+    )
 #access the value supplied after -n
 args = parser.parse_args()
 
