@@ -1,10 +1,17 @@
-balance = 0
-def deposit(n):
-    global balance
-    balance+=n
-def withdraw(n):
-    global balance
-    balance-=n
-deposit(100)
-withdraw(50)
-print(balance)
+
+class Account:
+    def __init__(self):
+        self._balance = 0
+    @property
+    def balance(self):
+        return self._balance
+    def deposit(self,n):
+        self._balance+=n
+    def withdraw(self,n):
+        self._balance-=n
+    
+    
+account = Account()
+account.deposit(100)
+account.withdraw(20)
+print(account.balance)
