@@ -4,9 +4,8 @@ students = [
     {"name" : "Joya", "house" : "sonaimuri"},
     {"name" : "Sohan", "house" : "sonaimuri"}
 ]
-houses = []
+houses = set()
 for student in students:
-    if student["house"] not in houses:
-        houses.append(student["house"])
-for house in houses:
+        houses.add(student["house"])
+for house in sorted(houses):
     print(house)
