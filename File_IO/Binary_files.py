@@ -10,4 +10,4 @@ images[0].save(
     duration = 500,
     loop = 0
 
-)
+) 

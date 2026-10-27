@@ -2,6 +2,6 @@ students = [
     "Bristy","Trishna", "Tonmoy"
 ]
 stH = {
-    st : "Feni" for st in students
+    i: {st : "Feni"} for i,st in enumerate(students,start=1)
 }
 print(stH)
